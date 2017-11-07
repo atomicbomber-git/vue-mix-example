@@ -8,7 +8,7 @@
 
     <body>
         <div id="app">
-            <example-component>
+            <example-component people="Asun">
 
             </example-component>
         </div>

@@ -6,7 +6,7 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, neque, praesentium. Id temporibus, excepturi dolorum ipsa. Itaque rerum fuga excepturi veniam dolorem maiores nemo voluptas, commodi minus consectetur. Nisi, laudantium!
+                        {{ people }}
                     </div>
                 </div>
             </div>
@@ -16,6 +16,8 @@
 
 <script>
     export default {
+        props: ["people"],
+        
         mounted() {
             console.log('Component mounted.')
         }
