@@ -42742,11 +42742,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ["people"],
 
+    props: ["data_url"],
+
+    data: function data() {
+        return {
+            "items": [{ "name": "Cigarette" }, { name: "Chocolate" }]
+        };
+    },
     mounted: function mounted() {
+        var self = this;
+        axios.get(this.data_url).then(function (response) {
+            self.items = response.data;
+        }).catch(function (error) {});
+
         console.log('Component mounted.');
     }
 });
@@ -42768,10 +42784,18 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "panel-body" }, [
-            _vm._v(
-              "\n                    " +
-                _vm._s(_vm.people) +
-                "\n                "
+            _c(
+              "div",
+              { staticClass: "list-group" },
+              _vm._l(_vm.items, function(item) {
+                return _c("div", { staticClass: "list-group item" }, [
+                  _vm._v(
+                    "\n                            " +
+                      _vm._s(item.name) +
+                      "\n                        "
+                  )
+                ])
+              })
             )
           ])
         ])

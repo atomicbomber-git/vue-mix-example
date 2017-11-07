@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <meta x-csrf-token="{{ csrf_token() }}">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8" />
         <title> All Items </title>
         <link rel="stylesheet" href="{{ asset("css/app.css") }}">
@@ -8,7 +8,7 @@
 
     <body>
         <div id="app">
-            <example-component people="Asun">
+            <example-component data_url="{{ route("item.all") }}">
 
             </example-component>
         </div>

@@ -6,7 +6,12 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        {{ people }}
+                        <div class="list-group">
+                            <div class="list-group item" v-for="item in items">
+                                {{ item.name }}
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -16,9 +21,26 @@
 
 <script>
     export default {
-        props: ["people"],
-        
+
+        props: ["data_url"],
+
+        data() {
+            return {
+                "items": [{"name": "Cigarette"}, {name: "Chocolate"}]
+            }
+        },
+
         mounted() {
+            var self = this
+            axios.get(this.data_url)
+                .then(function(response) {
+                    self.items = response.data
+                })
+                .catch(function(error) {
+
+                })
+
+
             console.log('Component mounted.')
         }
     }

@@ -11,7 +11,13 @@ class ItemController extends Controller
     }
 
     function all() {
-        $items = ["Eenie", "Minnie", "Meenie", "Moe"];
+        $items = [
+            [ "name" => "Eenie" ],
+            [ "name" => "Minnie" ],
+            [ "name" => "Meenie" ],
+            [ "name" => "Moe" ]
+        ];
+
         return response()->json($items);
     }
 }
