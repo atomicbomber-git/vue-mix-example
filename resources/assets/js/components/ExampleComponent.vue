@@ -6,7 +6,7 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        I'm an example component!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, neque, praesentium. Id temporibus, excepturi dolorum ipsa. Itaque rerum fuga excepturi veniam dolorem maiores nemo voluptas, commodi minus consectetur. Nisi, laudantium!
                     </div>
                 </div>
             </div>

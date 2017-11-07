@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/item", "ItemController@index")->name("item.index");
+Route::get("/item/all", "ItemController@all")->name("item.all");
